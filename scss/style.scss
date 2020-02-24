@@ -1,0 +1,62 @@
+@import "scss/variable";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    font-size: 20px;
+    
+}
+.container{
+    padding: 0px;
+    margin: 0px;
+    max-width: none;
+    .innerContainer {
+        margin-top: 20px;
+    }
+}
+.col-sm{
+    margin: 0;
+}
+.blanckCol {
+    width: 10px;
+}
+.header,.footer {
+    background-color: $main-color;
+    color: $accent-color;
+    h1 {
+        margin: 10px 20px;
+    }
+}
+.r2{
+    height: 100px;
+}
+
+.buttonArea {
+    text-align: center;
+   button{
+       display: inline;
+      background-color: $button-color;
+       color:$main-color;
+   }
+   button:hover{
+    background-color: $button-color-hover;
+   }
+}
+
+    
+select{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+#myChart {
+    width:10px;
+    height: 100px;
+}
+p {
+    color :red($color: #ff1616);
+}

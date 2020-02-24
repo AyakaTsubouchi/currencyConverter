@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- internal file -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row header">
+      <div class="col-sm">
+        <h1>Currency Converter</h1>
+      </div>
+    </div>
+    <div class="innerContainer">
+      <div class="row r2">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-11">
+          <input type="date" id="mydate" oninput="getData()" onchange="getData()">
+        </div>
+      </div>
+      <div class="row r3">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4">
+          <label>From</label>
+          <input type="number" id="fAmount" oninput="getData()" onchange="getData()">
+          <select id="fCurrency" oninput="getData()" onchange="getData()">
+            <option value="USDUSD">USD</option>
+            <option value="USDCAD">CAD</option>
+            <option value="USDAUD">AUD</option>
+          </select>
+
+        </div>
+
+        <div class="col-sm-4">
+          <label>To</label>
+          <input type="number" id="toAmount" disabled={true} oninput="getData()" onchange="getData()">
+
+          <select id="toCurrency" oninput="getData()" onchange="getData()">
+            <option value="USDCAD">CAD</option>
+            <option value="USDAUD">AUD</option>
+            <option value="USDUSD">USD</option>
+          </select>
+        </div>
+        <!-- <div class="col-sm-1">
+              <h1 onClick="handleSwap()" className="swap" >&#8593;&#8595;</h1>
+                </div> -->
+      </div>
+      <div class="row r3">
+        <div class="col-sm buttonArea">
+          <button onclick="getData()">Check</button>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row footer">
+      <div class="col-sm">
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- for graph -->
+  <!-- <form action=""></form>
+    <input type="date" id="mydate" >
+    <div id="demo"></div>
+    <input type="text" id="fCurrency" placeholder="from">
+    <input type="number" id="fAmount">
+    <input type="text" id="toCurrency" placeholder="to">
+    <input type="number" id="toAmount">
+    <button onclick="getData()" style="color: white;">this is button</button>
+    -->
+
+  <!-- <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+    <canvas id="myChart" width="400" height="400"></canvas> -->
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
